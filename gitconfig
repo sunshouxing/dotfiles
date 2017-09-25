@@ -7,4 +7,6 @@
 	last = log -1 HEAD
 [user]
 	name = shouxing.sun
-	mail = shouxing.sun@aliyun.com
+	email = shouxing.sun@aliyun.com
+[push]
+	default = simple
