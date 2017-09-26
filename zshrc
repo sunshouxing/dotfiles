@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/Nodejs/bin:$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/Tools/node/bin:$HOME/Tools/phantomjs/bin:$HOME/bin:/usr/local/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/arthur/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -89,6 +89,3 @@ alias npm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
-
-# export TERM=xterm-256color
-# [ -n "$TMUX" ] && export TERM=screen-256color
