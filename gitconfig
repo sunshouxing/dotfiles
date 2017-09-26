@@ -1,12 +1,15 @@
-[alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	unstage = reset HEAD --
-	last = log -1 HEAD
+[core]
+    autocrlf = input
+    editor = vim
 [user]
-	name = shouxing.sun
-	email = shouxing.sun@aliyun.com
+    name = shouxing.sun
+    email = shouxing.sun@aliyun.com
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    unstage = reset HEAD --
+    last = log -1 HEAD
 [push]
-	default = simple
+    default = simple
