@@ -26,7 +26,7 @@ set nocompatible
   filetype on
   filetype plugin on
   filetype indent on
-  autocmd FileType javascript,html,xml,css,pug set sw=2 ts=2 sts=2
+  autocmd FileType javascript,html,xml,css set shiftwidth=2 tabstop=2 softtabstop=2
 " }}}
 
 " => indent {{{
