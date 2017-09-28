@@ -1,0 +1,9 @@
+snippet ngmodule
+import angular from 'angular';
+import config from './${1:module-name}.config';
+
+export default angular
+	.module('app.$1', [$2])
+	.config(config)
+	.name;
+endsnippet

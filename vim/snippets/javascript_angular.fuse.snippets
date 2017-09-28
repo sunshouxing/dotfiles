@@ -1,0 +1,40 @@
+snippet msnav
+// navigation
+msNavigationServiceProvider.saveItem('apps.${1:app-name}', {
+	title: '${1/(\w+)(-*)/(?1:\u$1)(?2: )/g}',
+	icon: 'icon-$3',
+	state: 'app.$1',
+	weight: ${4:weight}
+});
+endsnippet
+
+snippet msst
+// state
+$stateProvider.state('app.${1:app-name}', {
+  url: '/$1',
+  views: {
+    'content@app': {
+      templateUrl: 'app/main/apps/$1/$1.html',
+      controller: '${1/(\w+)-*/\u$1/g}Controller as vm'
+    }
+  }
+});
+endsnippet
+
+
+snippet mstrans
+// translation
+$translatePartialLoaderProvider.addPart('app/main/apps/${1:app-name}');
+endsnippet
+
+snippet seed
+// ${1:model} sample data
+${1/\w+/\u$0/}.find({}).remove()
+	.then(() => {
+		${1/\w+/\u$0/}.create(
+			${2:// insert data here}
+		)
+		.then(() => console.log('finished populating $1'))
+		.catch(error => console.log(\`error when populating $1, error info: ${error}\`));
+	});
+endsnippet

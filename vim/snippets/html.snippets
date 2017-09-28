@@ -1,0 +1,24 @@
+snippet t "a simple html tag"
+<${1:div}>
+  Hello, world!
+</${1/(\w+).*/$1/}>
+endsnippet
+
+snippet a "html a directive"
+<a href="$1"${2: class="${3:link}"}>
+  $0
+</a>
+endsnippet
+
+snippet date
+${2:${1:`date +%d`}.`date +%m`}.`date +%Y`
+endsnippet
+
+snippet title "Tetelize the text"
+${1: a text}
+${1/\w+\s*/\u$0/g}
+endsnippet
+
+snippet mdicon "angular material icon"
+<md-icon md-font-icon="icon-${1:menu}" class="icon"></md-icon>
+endsnippet
