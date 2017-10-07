@@ -20,7 +20,7 @@ set nocompatible
   if filereadable(expand("~/.vim/vundles.vim"))
     source ~/.vim/vundles.vim
   endif
-" }}} 
+" }}}
 
 " => filetype {{{
   filetype on
@@ -47,10 +47,10 @@ set nocompatible
 " }}}
 
 " => search {{{
-	set incsearch         " find the next match as we type the search
-	set hlsearch          " highlight searches by default
-	set ignorecase        " ignore case when searching...
-	set smartcase         " ...unless we type a capital
+  set incsearch         " find the next match as we type the search
+  set hlsearch          " highlight searches by default
+  set ignorecase        " ignore case when searching...
+  set smartcase         " ...unless we type a capital
 
   " disable highlight with <leader><CR>
   map <silent><leader><CR> :nohlsearch<CR>
@@ -60,10 +60,10 @@ set nocompatible
   set foldmethod=indent " Fold based on indent
   set foldnestmax=3     " Deepest fold is 3 levels
   set nofoldenable      " Don't fold by default
-" }}} 
+" }}}
 
 " => system clipboard {{{
-  " select all with CTRL-A 
+  " select all with CTRL-A
   nnoremap <C-a> gg0vG$
   " copy selected contents to system clipboard with CTRL-C
   vnoremap <C-c> "+y
@@ -78,9 +78,12 @@ set nocompatible
   " use unix as the standard file type
   set fileformats=unix,dos,mac
 
-  " use atom onedark color scheme
-  " set termguicolors
-  
+  " color scheme
+  if has('termguicolors')
+    set termguicolors
+  endif
+  colorscheme solarized
+
   " make comments italic (must set after colorscheme)
   highlight Comment cterm=italic
 " }}}
