@@ -6,7 +6,6 @@ set nocompatible
   set hidden            " Buffers can exist in the background
   set autoread          " Reload files changed outside vim
   set lazyredraw        " Don't redraw while executing macros
-  set visualbell        " No sounds
   syntax on             " Turn on syntax highlighting
 
   " With a map leader it's possible to do extra key combinations
@@ -71,21 +70,12 @@ set nocompatible
   inoremap <C-v> <F10><C-r>+<F10><ESC>
 " }}}
 
-" => colors and fonts {{{
+" => file encoding and format {{{
   " set utf8 as standard encoding and en_us as the standard language
   set encoding=utf8
 
   " use unix as the standard file type
   set fileformats=unix,dos,mac
-
-  " color scheme
-  if has('termguicolors')
-    set termguicolors
-  endif
-  colorscheme solarized
-
-  " make comments italic (must set after colorscheme)
-  highlight Comment cterm=italic
 " }}}
 
 " => function keys mapping {{{
