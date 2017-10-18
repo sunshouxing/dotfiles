@@ -1,5 +1,6 @@
 " => airline {{{
-  let g:airline_theme='bubblegum'
+  let g:airline_theme='solarized'
+  let g:airline_solarized_bg='dark'
   let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#buffers_label = 'b'
