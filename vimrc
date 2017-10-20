@@ -1,12 +1,13 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+set linespace=10
+
 " => general config {{{
   set number            " Line numbers are good
   set hidden            " Buffers can exist in the background
   set autoread          " Reload files changed outside vim
   set lazyredraw        " Don't redraw while executing macros
-  syntax on             " Turn on syntax highlighting
 
   " With a map leader it's possible to do extra key combinations
   let mapleader = ","
@@ -14,10 +15,22 @@ set nocompatible
   nmap <leader>w :w!<CR>
 " }}}
 
-" => vundle initialization {{{
+" => vundle init {{{
   " Use Vundle to manage all the other plugins
   if filereadable(expand("~/.vim/vundles.vim"))
     source ~/.vim/vundles.vim
+  endif
+" }}}
+
+" => custom settings {{{
+  if filereadable(expand("~/.vim/settings.vim"))
+    source ~/.vim/settings.vim
+  endif
+" }}}
+
+" => self-defined scripts {{{
+  if filereadable(expand("~/.vim/scripts.vim"))
+    source ~/.vim/scripts.vim
   endif
 " }}}
 
@@ -82,6 +95,9 @@ set nocompatible
   " reload vimrc with F5
   nnoremap <silent><F5> :source ~/.vimrc<CR>
 
+  " eslint current javascript file with F6
+  nnoremap <silent><F6> :call Eslint()<CR>
+
   " toggle list mode with F9
   nnoremap <silent><F9> :set list! listchars=space:.,trail:#,eol:$<CR>
 
@@ -106,12 +122,6 @@ set nocompatible
 
 " => tab {{{
   nnoremap <leader>tc :tabclose<CR>
-" }}}
-
-" => custom settings {{{
-  if filereadable(expand("~/.vim/settings.vim"))
-    source ~/.vim/settings.vim
-  endif
 " }}}
 
 " vim:set ts=2 sw=2 sts=2: "
