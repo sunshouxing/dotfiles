@@ -72,6 +72,9 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Set directory colors
+eval `dircolors ~/.dircolors`
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
