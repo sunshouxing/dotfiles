@@ -1,6 +1,6 @@
 " => vimux {{{
     " Run the current file with rspec
-    map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+    map <Leader>vu :call VimuxRunCommand("clear; dos2unix " . bufname("%"))<CR>
 
     " Prompt for a command to run
     map <Leader>vp :VimuxPromptCommand<CR>
