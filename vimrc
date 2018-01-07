@@ -39,7 +39,7 @@ set linespace=10
   filetype plugin on
   filetype indent on
   autocmd FileType javascript,html,xml,css set shiftwidth=2 tabstop=2 softtabstop=2
-  autocmd FileType json,pug set shiftwidth=4 tabstop=4 softtabstop=4
+  autocmd FileType json,pug,yaml,yml set shiftwidth=4 tabstop=4 softtabstop=4
 " }}}
 
 " => indent {{{
@@ -51,6 +51,10 @@ set linespace=10
 
   " 1 tab == 4 spaces
   set shiftwidth=4 tabstop=4 softtabstop=4
+
+  set textwidth=80
+  set colorcolumn=+1
+  set cursorline
 " }}}
 
 " => turn off swap files {{{
