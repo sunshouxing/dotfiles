@@ -1,8 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/Tools/node/bin:$HOME/Tools/phantomjs/bin:$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/Nodejs/bin:$HOME/Tools/phantomjs/bin:$HOME/bin:/usr/local/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+
+export EDITOR=vim
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -51,7 +53,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git docker docker-compose ubuntu tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -75,6 +77,9 @@ source $ZSH/oh-my-zsh.sh
 # Set directory colors
 eval `dircolors ~/.dircolors`
 
+# Swap caps lock and left ctrl
+setxkbmap -option "ctrl:swapcaps"
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
@@ -92,3 +97,4 @@ alias npm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
+alias vim=nvim
