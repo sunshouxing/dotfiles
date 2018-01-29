@@ -1,15 +1,22 @@
 #!/usr/bin/env bash
 
-function doIt() {
-    rsync --exclude ".git/" \
+function syncAll() {
+    rsync --archive --verbose --human-readable \
+        --exclude ".git/" \
         --exclude "jupyter/" \
         --exclude "bootstrap.sh" \
         --exclude "README.md" \
         --exclude "LICENSE" \
-        -avh --no-perms . ~;
-    source ~/.zshrc;
+        --no-perms . ~
+
+    source ~/.zshrc
 }
 
-doIt
+function installVimPlugins() {
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim +PluginInstall +qall
+}
+
+syncAll && installVimPlugins
 
 # vim:set sw=4 ts=4 sts=4: #
