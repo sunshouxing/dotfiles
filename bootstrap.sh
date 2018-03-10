@@ -19,4 +19,6 @@ function installVimPlugins() {
 
 syncAll && installVimPlugins
 
+mv ~/.vim/foo.vim ~/.vim/bundle/vim-airline/autoload/airline/extensions/tabline/formatters/
+
 # vim:set sw=4 ts=4 sts=4: #
