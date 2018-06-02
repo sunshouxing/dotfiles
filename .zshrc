@@ -97,4 +97,7 @@ alias npm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
+
 alias vim=nvim
+alias python=python3
+alias pip=pip3
