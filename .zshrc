@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/Nodejs/bin:$HOME/Tools/phantomjs/bin:$HOME/bin:/usr/local/bin:$PATH"
+export OPT="$HOME/Workspace/opt"
+export PATH="$OPT/go/bin:$OPT/node/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -78,7 +79,7 @@ source $ZSH/oh-my-zsh.sh
 eval `dircolors ~/.dircolors`
 
 # Swap caps lock and left ctrl
-setxkbmap -option "ctrl:swapcaps"
+# setxkbmap -option "ctrl:swapcaps"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"

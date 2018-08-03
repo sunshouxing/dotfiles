@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/arthur/mike.wu/secom-web/src'
+let g:netrw_dirhist_2='/home/arthur/mike.wu/secom-web/src/components'
+let g:netrw_dirhist_3='/home/arthur'
+let g:netrw_dirhist_4='/home/arthur/Bitmain/mike.wu/secom-web'
+let g:netrw_dirhist_5='/home/arthur/Bitmain/mike.wu/secom-web/src'
+let g:netrw_dirhist_6='/home/arthur/Bitmain/mike.wu/secom-web/src/components'
+let g:netrw_dirhist_7='/home/arthur/Workspace/git/bshm-deploy/mongo'
+let g:netrw_dirhist_8='/home/arthur/Bitmain/sophon-api'
