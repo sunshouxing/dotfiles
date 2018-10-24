@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-readonly VIM_CONF_DIR="~/.config"
-readonly VIM_SITE_DIR="~/.local/share/nvim/site/autoload"
-readonly TABLINE_FORMATTERS_DIR="~/.config/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/formatters"
+readonly VIM_CONF_DIR="$HOME/.config"
+readonly VIM_SITE_DIR="$HOME/.local/share/nvim/site/autoload"
+readonly TABLINE_FORMATTERS_DIR="$HOME/.config/nvim/plugged/vim-airline/autoload/airline/extensions/tabline/formatters"
 
 cd $(dirname $(readlink -f "$BASH_SOURCE"))
 
